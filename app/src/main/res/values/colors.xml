@@ -4,7 +4,8 @@
     <color name="red">#E71D36</color>
     <color name="orange">#FF9F1C</color>
     <color name="electric_green">#56D437</color>
-
+    <color name="main_background">#141B20</color>
+    <color name="navigation_bar">#27353F</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
