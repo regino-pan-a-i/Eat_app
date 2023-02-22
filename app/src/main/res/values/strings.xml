@@ -14,4 +14,9 @@
     <string name="button_cart_text">Cart</string>
     <string name="button_recipes_text">Recipes</string>
     <string name="button_scan_text">Scan</string>
+
+    <string name="navBar_saved">Saved</string>
+    <string name="navBar_planning">Planning</string>
+    <string name="navBar_account">Account</string>
+    <string name="navBar_home">Home</string>
 </resources>
