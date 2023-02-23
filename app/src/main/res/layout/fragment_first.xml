@@ -103,49 +103,55 @@
     </RelativeLayout>
 
     <!--15 Mobile bottom nav aka Footer, Menu, Tabs, Navigation-->
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mobile_bott"
         android:layout_width="match_parent"
         android:layout_height="69dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:background="@color/navigation_bar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" >
-        <!--Frame 10-->
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Frame 10 -->
         <Button
             android:id="@+id/frame_10"
-            android:layout_width="140dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@color/black"
+            android:background=""
+            android:paddingTop="37dp"
             android:text="@string/navBar_saved"
-            android:layout_alignParentStart="true">
-        </Button>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/frame_9"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
         <!-- Frame 9 -->
         <Button
             android:id="@+id/frame_9"
-            android:layout_width="120dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_toStartOf="@+id/frame_7"
-            android:layout_toEndOf="@+id/frame_10"
-            android:background="@color/black"
-            android:text="@string/navBar_planning">
-        </Button>
-        <!-- Frame 7 -->
+            android:background=""
+            android:paddingTop="37dp"
+            android:text="@string/navBar_planning"
+            app:layout_constraintStart_toEndOf="@id/frame_10"
+            app:layout_constraintEnd_toStartOf="@id/frame_8"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- Frame 8 -->
         <Button
-            android:id="@+id/frame_7"
-            android:layout_width="140dp"
+            android:id="@+id/frame_8"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp"
-            android:background="@color/black"
+            android:background=""
+            android:paddingTop="37dp"
             android:text="@string/navBar_account"
-            android:layout_alignParentEnd="true">
-        </Button>
-    </RelativeLayout>
+            app:layout_constraintStart_toEndOf="@id/frame_9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

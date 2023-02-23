@@ -20,4 +20,10 @@
     <string name="navBar_account">Account</string>
     <string name="navBar_home">Home</string>
     <string name="navBar_scan">Scan</string>
+
+    <string name="scan_content_description">Scan icon</string>
+    <string name="saved_content_description">Saved icon</string>
+    <string name="scale_content_description">Scale icon</string>
+    <string name="account_content_description">Account icon</string>
+    <string name="home_content_description">Home icon</string>
 </resources>
