@@ -35,7 +35,7 @@
         android:layout_height="130dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@color/teal"
+        android:background="@null"
         android:text="@string/button_cart_text"
         android:drawableTop="@drawable/cart_large_img"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:drawableTop="@drawable/pantry_img"
-            android:background=""
+            android:background="@null"
             android:text="@string/button_pantry_text">
         </Button>
     </RelativeLayout>
@@ -83,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:drawableTop="@drawable/scale_img"
-            android:background=""
+            android:background="@null"
             android:text="@string/button_recipes_text">
         </Button>
     </RelativeLayout>
@@ -105,7 +105,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:drawableTop="@drawable/scan_large_img"
-            android:background=""
+            android:background="@null"
             android:text="@string/button_scan_text">
         </Button>
 
@@ -126,7 +126,7 @@
             android:id="@+id/frame_10"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background=""
+            android:background="@null"
             android:text="@string/navBar_saved"
             android:drawableTop="@drawable/save_img"
             app:layout_constraintStart_toStartOf="parent"
@@ -139,7 +139,7 @@
             android:id="@+id/frame_9"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background=""
+            android:background="@null"
             android:text="@string/navBar_planning"
             android:drawableTop="@drawable/calendar_img"
             app:layout_constraintStart_toEndOf="@id/frame_10"
@@ -152,7 +152,7 @@
             android:id="@+id/frame_8"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background=""
+            android:background="@null"
             android:text="@string/navBar_account"
             android:drawableTop="@drawable/account_img"
             app:layout_constraintStart_toEndOf="@id/frame_9"
