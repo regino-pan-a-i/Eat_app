@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_first_fragment"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +37,7 @@
         android:layout_alignParentTop="true"
         android:background="@color/teal"
         android:text="@string/button_cart_text"
+        android:drawableTop="@drawable/cart_large_img"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
@@ -58,6 +60,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:drawableTop="@drawable/pantry_img"
             android:background=""
             android:text="@string/button_pantry_text">
         </Button>
@@ -76,17 +79,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_cart"
         app:layout_constraintVertical_bias="0.19999999">
-
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:drawableTop="@drawable/scale_img"
             android:background=""
             android:text="@string/button_recipes_text">
         </Button>
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/filled_butt"
+        android:id="@+id/button_scan"
         android:layout_width="126dp"
         android:layout_height="130dp"
         android:layout_alignParentStart="true"
@@ -101,6 +104,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:drawableTop="@drawable/scan_large_img"
             android:background=""
             android:text="@string/button_scan_text">
         </Button>
@@ -137,7 +141,7 @@
             android:layout_height="match_parent"
             android:background=""
             android:text="@string/navBar_planning"
-            android:drawableTop="@drawable/scale_img"
+            android:drawableTop="@drawable/calendar_img"
             app:layout_constraintStart_toEndOf="@id/frame_10"
             app:layout_constraintEnd_toStartOf="@id/frame_8"
             app:layout_constraintTop_toTopOf="parent"
