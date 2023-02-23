@@ -19,4 +19,5 @@
     <string name="navBar_planning">Planning</string>
     <string name="navBar_account">Account</string>
     <string name="navBar_home">Home</string>
+    <string name="navBar_scan">Scan</string>
 </resources>
