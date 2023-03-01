@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_InventoryFragment"
             app:destination="@id/InventoryFragment" />
+        <!--<action
+            android:id="@+id/action_FirstFragment_to_RecepiesFragment"
+            app:destination="@id/RecepiesFragment" /> -->
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -30,7 +33,18 @@
     </fragment>
     <fragment
         android:id="@+id/InventoryFragment"
-        android:name="com.example.eatdraft.InventoryFragment" >
+        android:name="com.example.eatdraft.InventoryFragment"
+        tools:layout="@layout/inventory_fragment">
     </fragment>
+
+    <!-- <fragment
+        android:id="@+id/RecepiesFragment"
+        android:name="com.example.eatdraft.RecepiesFragment"
+        tools:layout="@layout/inventory_fragment">
+        <action
+            android:id="@+id/action_RecepiesFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment> -->
+
 
 </navigation>
