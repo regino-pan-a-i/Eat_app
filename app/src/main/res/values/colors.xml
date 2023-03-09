@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="teal">#2EC4B6</color>
-    <color name="red">#E71D36</color>
-    <color name="orange">#FF9F1C</color>
-    <color name="electric_green">#56D437</color>
+    <color name="teal">#C62EC4B6</color>
+    <color name="red">#C7E71D36</color>
+    <color name="orange">#FFA41C</color>
+    <color name="electric_green">#C756D437</color>
     <color name="main_background">#141B20</color>
     <color name="navigation_bar">#27353F</color>
     <color name="purple_200">#FFBB86FC</color>
