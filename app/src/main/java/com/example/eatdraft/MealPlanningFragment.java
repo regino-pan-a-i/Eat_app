@@ -43,6 +43,14 @@ public class MealPlanningFragment extends Fragment{
                         .navigate(R.id.action_MealPlanningFragment_to_ScanFragment);
             }
         });
+
+        binding.navSavedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(MealPlanningFragment.this)
+                        .navigate(R.id.action_MealPlanningFragment_to_SavedFragment);
+            }
+        });
     }
 
     @Override

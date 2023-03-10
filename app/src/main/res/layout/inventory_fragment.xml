@@ -28,7 +28,8 @@
             android:drawableTop="@drawable/scan_small_img"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/nav_saved_button"/>
 
         <!-- Nav Saved Button -->
         <Button

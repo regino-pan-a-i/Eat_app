@@ -51,6 +51,14 @@ public class InventoryFragment extends Fragment {
                         .navigate(R.id.action_InventoryFragment_to_ScanFragment);
             }
         });
+
+        binding.navSavedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(InventoryFragment.this)
+                        .navigate(R.id.action_InventoryFragment_to_SavedFragment);
+            }
+        });
     }
 
     @Override

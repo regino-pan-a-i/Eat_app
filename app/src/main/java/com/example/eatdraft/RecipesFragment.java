@@ -52,6 +52,14 @@ public class RecipesFragment extends Fragment {
                         .navigate(R.id.action_RecipesFragment_to_ScanFragment);
             }
         });
+
+        binding.navSavedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(RecipesFragment.this)
+                        .navigate(R.id.action_RecipesFragment_to_SavedFragment);
+            }
+        });
     }
 
     @Override

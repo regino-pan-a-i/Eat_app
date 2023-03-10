@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_background">
@@ -29,20 +28,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/nav_saved_button"/>
+            app:layout_constraintEnd_toStartOf="@+id/nav_account_button"/>
 
-        <!-- Nav Saved Button -->
+        <!-- Nav Account Button -->
         <Button
-            android:id="@+id/nav_saved_button"
+            android:id="@+id/nav_account_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@null"
-            android:text="@string/navBar_saved"
+            android:text="@string/navBar_account"
             android:textColor="@color/white"
             android:paddingTop="10dp"
-            android:drawableTop="@drawable/save_img"
+            android:drawableTop="@drawable/account_img"
             app:layout_constraintStart_toEndOf="@id/nav_scan_button"
-            app:layout_constraintEnd_toStartOf="@id/nav_planning_button"
+            app:layout_constraintEnd_toStartOf="@+id/nav_planning_button"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
@@ -56,7 +55,7 @@
             android:textColor="@color/white"
             android:paddingTop="10dp"
             android:drawableTop="@drawable/calendar_img"
-            app:layout_constraintStart_toEndOf="@id/nav_saved_button"
+            app:layout_constraintStart_toEndOf="@id/nav_account_button"
             app:layout_constraintEnd_toStartOf="@id/nav_home_button"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
@@ -82,13 +81,12 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is the recipes fragment"
+        android:text="This is the saved recipes fragment"
         android:textColor="#FFFFFF"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/mobile_bott"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent" />>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

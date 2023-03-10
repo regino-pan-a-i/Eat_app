@@ -51,6 +51,14 @@ public class GroceryListFragment extends Fragment{
                         .navigate(R.id.action_GroceryListFragment_to_ScanFragment);
             }
         });
+
+        binding.navSavedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(GroceryListFragment.this)
+                        .navigate(R.id.action_GroceryListFragment_to_SavedFragment);
+            }
+        });
     }
 
     @Override

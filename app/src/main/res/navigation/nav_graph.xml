@@ -29,6 +29,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_ScanFragment"
             app:destination="@id/ScanFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_SavedFragment"
+            app:destination="@id/SavedFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -53,6 +56,9 @@
         <action
             android:id="@+id/action_InventoryFragment_to_ScanFragment"
             app:destination="@id/ScanFragment" />
+        <action
+            android:id="@+id/action_InventoryFragment_to_SavedFragment"
+            app:destination="@id/SavedFragment" />
     </fragment>
 
     <fragment
@@ -68,6 +74,9 @@
         <action
             android:id="@+id/action_RecipesFragment_to_ScanFragment"
             app:destination="@id/ScanFragment" />
+        <action
+            android:id="@+id/action_RecipesFragment_to_SavedFragment"
+            app:destination="@id/SavedFragment" />
     </fragment>
 
     <fragment
@@ -83,6 +92,9 @@
         <action
             android:id="@+id/action_GroceryListFragment_to_ScanFragment"
             app:destination="@id/ScanFragment" />
+        <action
+            android:id="@+id/action_GroceryListFragment_to_SavedFragment"
+            app:destination="@id/SavedFragment" />
     </fragment>
 
 
@@ -96,6 +108,9 @@
         <action
             android:id="@+id/action_MealPlanningFragment_to_ScanFragment"
             app:destination="@id/ScanFragment" />
+        <action
+            android:id="@+id/action_MealPlanningFragment_to_SavedFragment"
+            app:destination="@id/SavedFragment" />
     </fragment>
 
     <fragment
@@ -109,6 +124,26 @@
         <action
             android:id="@+id/action_ScanFragment_to_MealPlanningFragment"
             app:destination="@id/MealPlanningFragment" />
+        <action
+            android:id="@+id/action_ScanFragment_to_SavedFragment"
+            app:destination="@id/SavedFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/SavedFragment"
+        android:name="com.example.eatdraft.SavedFragment"
+        tools:layout="@layout/saved_fragment">
+
+        <action
+            android:id="@+id/action_SavedFragment_to_MealPlanningFragment"
+            app:destination="@id/MealPlanningFragment" />
+        <action
+            android:id="@+id/action_SavedFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SavedFragment_to_ScanFragment"
+            app:destination="@id/ScanFragment" />
+    </fragment>
+
 
 </navigation>

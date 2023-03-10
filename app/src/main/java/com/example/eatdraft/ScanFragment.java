@@ -44,6 +44,14 @@ public class ScanFragment extends Fragment {
             }
         });
 
+        binding.navSavedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(ScanFragment.this)
+                        .navigate(R.id.action_ScanFragment_to_SavedFragment);
+            }
+        });
+
     }
 
     @Override
