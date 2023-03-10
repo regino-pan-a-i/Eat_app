@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_background">
@@ -21,6 +22,8 @@
             android:layout_height="match_parent"
             android:background="@null"
             android:text="@string/navBar_scan"
+            android:textColor="@color/white"
+            android:paddingTop="10dp"
             android:drawableTop="@drawable/scan_small_img"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/frame_10"
@@ -33,7 +36,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@null"
+            android:textColor="@color/white"
             android:text="@string/navBar_saved"
+            android:paddingTop="10dp"
             android:drawableTop="@drawable/save_img"
             app:layout_constraintStart_toEndOf="@id/frame_11"
             app:layout_constraintEnd_toStartOf="@id/frame_8"
@@ -47,6 +52,8 @@
             android:layout_height="match_parent"
             android:background="@null"
             android:text="@string/navBar_account"
+            android:textColor="@color/white"
+            android:paddingTop="10dp"
             android:drawableTop="@drawable/account_img"
             app:layout_constraintStart_toEndOf="@id/frame_10"
             app:layout_constraintEnd_toStartOf="@+id/frame_7"
@@ -59,6 +66,8 @@
             android:layout_height="match_parent"
             android:background="@null"
             android:text="@string/navBar_home"
+            android:textColor="@color/white"
+            android:paddingTop="10dp"
             android:drawableTop="@drawable/home_img"
             app:layout_constraintStart_toEndOf="@id/frame_8"
             app:layout_constraintEnd_toEndOf="parent"
@@ -66,5 +75,17 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is the Meal Planning Fragment"
+        android:textColor="#95FFFFFF"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/mobile_bott"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

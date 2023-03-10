@@ -54,7 +54,7 @@
 
     <fragment
         android:id="@+id/GroceryListFragment"
-        android:name="com.example.eatdraft.RecipesFragment"
+        android:name="com.example.eatdraft.GroceryListFragment"
         tools:layout="@layout/grocery_list_fragment">
         <action
             android:id="@+id/action_GroceryListFragment_to_FirstFragment"
@@ -64,7 +64,7 @@
 
     <fragment
         android:id="@+id/MealPlanningFragment"
-        android:name="com.example.eatdraft.RecipesFragment"
+        android:name="com.example.eatdraft.MealPlanningFragment"
         tools:layout="@layout/meal_planning">
         <action
             android:id="@+id/action_MealPlanningFragment_to_FirstFragment"

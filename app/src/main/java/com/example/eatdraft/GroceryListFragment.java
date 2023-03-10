@@ -8,11 +8,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.eatdraft.databinding.MealPlanningBinding;
-import com.example.eatdraft.databinding.RecipesFragmentBinding;
+import com.example.eatdraft.databinding.GroceryListFragmentBinding;
 
-public class RecipesFragment extends Fragment {
-    private RecipesFragmentBinding binding;
+public class GroceryListFragment extends Fragment{
+    private GroceryListFragmentBinding binding;
 
     @Override
     public View onCreateView(
@@ -20,7 +19,7 @@ public class RecipesFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = RecipesFragmentBinding.inflate(inflater, container, false);
+        binding = GroceryListFragmentBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -43,3 +42,5 @@ public class RecipesFragment extends Fragment {
         binding = null;
     }
 }
+
+

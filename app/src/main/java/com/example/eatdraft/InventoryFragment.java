@@ -7,12 +7,11 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.eatdraft.databinding.FragmentSecondBinding;
+import com.example.eatdraft.databinding.InventoryFragmentBinding;
 
 public class InventoryFragment extends Fragment {
-    private FragmentSecondBinding binding;
+    private InventoryFragmentBinding binding;
 
     @Override
     public View onCreateView(
@@ -20,7 +19,7 @@ public class InventoryFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        binding = InventoryFragmentBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }

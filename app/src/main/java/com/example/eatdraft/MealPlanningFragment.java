@@ -7,12 +7,12 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.eatdraft.databinding.MealPlanningBinding;
-import com.example.eatdraft.databinding.RecipesFragmentBinding;
 
-public class RecipesFragment extends Fragment {
-    private RecipesFragmentBinding binding;
+public class MealPlanningFragment extends Fragment{
+    private MealPlanningBinding binding;
 
     @Override
     public View onCreateView(
@@ -20,7 +20,7 @@ public class RecipesFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = RecipesFragmentBinding.inflate(inflater, container, false);
+        binding = MealPlanningBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
