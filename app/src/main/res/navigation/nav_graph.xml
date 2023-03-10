@@ -17,9 +17,12 @@
         <action
             android:id="@+id/action_FirstFragment_to_InventoryFragment"
             app:destination="@id/InventoryFragment" />
-        <!--<action
-            android:id="@+id/action_FirstFragment_to_RecepiesFragment"
-            app:destination="@id/RecepiesFragment" /> -->
+        <action
+            android:id="@+id/action_FirstFragment_to_RecipesFragment"
+            app:destination="@id/RecipesFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_GroceryListFragment"
+            app:destination="@id/GroceryListFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -35,16 +38,40 @@
         android:id="@+id/InventoryFragment"
         android:name="com.example.eatdraft.InventoryFragment"
         tools:layout="@layout/inventory_fragment">
+        <action
+            android:id="@+id/action_InventoryFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
 
-    <!-- <fragment
-        android:id="@+id/RecepiesFragment"
-        android:name="com.example.eatdraft.RecepiesFragment"
-        tools:layout="@layout/inventory_fragment">
+    <fragment
+        android:id="@+id/RecipesFragment"
+        android:name="com.example.eatdraft.RecipesFragment"
+        tools:layout="@layout/recipes_fragment">
         <action
-            android:id="@+id/action_RecepiesFragment_to_FirstFragment"
+            android:id="@+id/action_RecipesFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
-    </fragment> -->
+    </fragment>
+
+    <fragment
+        android:id="@+id/GroceryListFragment"
+        android:name="com.example.eatdraft.RecipesFragment"
+        tools:layout="@layout/grocery_list_fragment">
+        <action
+            android:id="@+id/action_GroceryListFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/MealPlanningFragment"
+        android:name="com.example.eatdraft.RecipesFragment"
+        tools:layout="@layout/meal_planning">
+        <action
+            android:id="@+id/action_MealPlanningFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+
 
 
 </navigation>

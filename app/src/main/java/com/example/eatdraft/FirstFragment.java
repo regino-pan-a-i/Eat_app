@@ -37,8 +37,32 @@ public class FirstFragment extends Fragment {
             }
         });
 
-        
+        binding.mainPantryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_InventoryFragment);
+            }
+        });
+
+        binding.mainRecipesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_RecipesFragment);
+            }
+        });
+
+        binding.mainCartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_GroceryListFragment);
+            }
+        });
+
     }
+
 
     @Override
     public void onDestroyView() {
