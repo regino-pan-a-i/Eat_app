@@ -9,10 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.eatdraft.databinding.MealPlanningBinding;
+import com.example.eatdraft.databinding.ScanFragmentBinding;
 
-public class MealPlanningFragment extends Fragment{
-    private MealPlanningBinding binding;
+public class ScanFragment extends Fragment {
+    private ScanFragmentBinding binding;
 
     @Override
     public View onCreateView(
@@ -20,7 +20,7 @@ public class MealPlanningFragment extends Fragment{
             Bundle savedInstanceState
     ) {
 
-        binding = MealPlanningBinding.inflate(inflater, container, false);
+        binding = ScanFragmentBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -28,21 +28,22 @@ public class MealPlanningFragment extends Fragment{
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.navHomeButton.setOnClickListener(new View.OnClickListener() {
+        binding.navPlanningButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(MealPlanningFragment.this)
-                        .navigate(R.id.action_MealPlanningFragment_to_FirstFragment);
+                NavHostFragment.findNavController(ScanFragment.this)
+                        .navigate(R.id.action_ScanFragment_to_MealPlanningFragment);
             }
         });
 
-        binding.navScanButton.setOnClickListener(new View.OnClickListener() {
+        binding.navHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(MealPlanningFragment.this)
-                        .navigate(R.id.action_MealPlanningFragment_to_ScanFragment);
+                NavHostFragment.findNavController(ScanFragment.this)
+                        .navigate(R.id.action_ScanFragment_to_FirstFragment);
             }
         });
+
     }
 
     @Override

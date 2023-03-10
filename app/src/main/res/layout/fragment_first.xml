@@ -7,17 +7,6 @@
     android:background="@color/main_background"
     tools:context=".FirstFragment">
 
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7" />
 
     <Button
         android:id="@+id/button_first"
@@ -27,7 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
 
 
@@ -42,9 +31,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <!-- Frame 10 -->
+        <!-- Nav Saved button -->
         <Button
-            android:id="@+id/frame_10"
+            android:id="@+id/nav_saved_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@null"
@@ -53,13 +42,13 @@
             android:paddingTop="10dp"
             android:drawableTop="@drawable/save_img"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/frame_9"
+            app:layout_constraintEnd_toStartOf="@id/nav_planning_button"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <!-- Frame 9 -->
+        <!-- Nav Planning Button -->
         <Button
-            android:id="@+id/frame_9"
+            android:id="@+id/nav_planning_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@null"
@@ -67,14 +56,14 @@
             android:textColor="@color/white"
             android:paddingTop="10dp"
             android:drawableTop="@drawable/calendar_img"
-            app:layout_constraintStart_toEndOf="@id/frame_10"
-            app:layout_constraintEnd_toStartOf="@id/frame_8"
+            app:layout_constraintStart_toEndOf="@id/nav_saved_button"
+            app:layout_constraintEnd_toStartOf="@id/nav_account_button"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <!-- Frame 8 -->
+        <!-- Nav Account Button -->
         <Button
-            android:id="@+id/frame_8"
+            android:id="@+id/nav_account_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@null"
@@ -82,7 +71,7 @@
             android:textColor="@color/white"
             android:paddingTop="10dp"
             android:drawableTop="@drawable/account_img"
-            app:layout_constraintStart_toEndOf="@id/frame_9"
+            app:layout_constraintStart_toEndOf="@id/nav_planning_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
@@ -90,6 +79,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="340dp"
         android:layout_height="382dp"
         app:layout_constraintBottom_toBottomOf="@+id/mobile_bott"
@@ -106,8 +96,8 @@
             android:layout_marginEnd="44dp"
             android:layout_marginBottom="61dp"
             android:background="@color/teal"
-            android:paddingTop="10dp"
             android:drawableTop="@drawable/cart_large_img"
+            android:paddingTop="10dp"
             android:text="@string/button_cart_text"
             android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/main_recipes_button"
@@ -121,8 +111,8 @@
             android:layout_height="130dp"
             android:layout_marginBottom="61dp"
             android:background="@color/red"
-            android:paddingTop="10dp"
             android:drawableTop="@drawable/pantry_img"
+            android:paddingTop="10dp"
             android:text="@string/button_pantry_text"
             android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/main_scan_button"
@@ -154,8 +144,8 @@
             android:layout_width="126dp"
             android:layout_height="130dp"
             android:background="@color/electric_green"
-            android:paddingTop="10dp"
             android:drawableTop="@drawable/scan_large_img"
+            android:paddingTop="10dp"
             android:text="@string/button_scan_text"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"

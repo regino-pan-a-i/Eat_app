@@ -15,9 +15,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-        <!-- Frame 11 -->
+
+        <!-- Nav Scan Button -->
         <Button
-            android:id="@+id/frame_11"
+            android:id="@+id/nav_scan_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@null"
@@ -29,9 +30,9 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <!-- Frame 10 -->
+        <!-- Nav Saved Button -->
         <Button
-            android:id="@+id/frame_10"
+            android:id="@+id/nav_saved_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@null"
@@ -39,14 +40,14 @@
             android:textColor="@color/white"
             android:paddingTop="10dp"
             android:drawableTop="@drawable/save_img"
-            app:layout_constraintStart_toEndOf="@id/frame_11"
-            app:layout_constraintEnd_toStartOf="@id/frame_9"
+            app:layout_constraintStart_toEndOf="@id/nav_scan_button"
+            app:layout_constraintEnd_toStartOf="@id/nav_planning_button"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <!-- Frame 9 -->
+        <!-- Nav Planning Button -->
         <Button
-            android:id="@+id/frame_9"
+            android:id="@+id/nav_planning_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@null"
@@ -54,14 +55,14 @@
             android:textColor="@color/white"
             android:paddingTop="10dp"
             android:drawableTop="@drawable/calendar_img"
-            app:layout_constraintStart_toEndOf="@id/frame_10"
-            app:layout_constraintEnd_toStartOf="@id/frame_7"
+            app:layout_constraintStart_toEndOf="@id/nav_saved_button"
+            app:layout_constraintEnd_toStartOf="@id/nav_home_button"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <!-- Frame 7 -->
+        <!-- Nav Home Button -->
         <Button
-            android:id="@+id/frame_7"
+            android:id="@+id/nav_home_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@null"
@@ -69,7 +70,7 @@
             android:textColor="@color/white"
             android:paddingTop="10dp"
             android:drawableTop="@drawable/home_img"
-            app:layout_constraintStart_toEndOf="@id/frame_9"
+            app:layout_constraintStart_toEndOf="@id/nav_planning_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>

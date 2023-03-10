@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.eatdraft.databinding.InventoryFragmentBinding;
 
@@ -27,13 +28,29 @@ public class InventoryFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-//        binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                NavHostFragment.findNavController(SecondFragment.this)
-//                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
-//            }
-//        });
+        binding.navPlanningButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(InventoryFragment.this)
+                        .navigate(R.id.action_InventoryFragment_to_MealPlanningFragment);
+            }
+        });
+
+        binding.navHomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(InventoryFragment.this)
+                        .navigate(R.id.action_InventoryFragment_to_FirstFragment);
+            }
+        });
+
+        binding.navScanButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(InventoryFragment.this)
+                        .navigate(R.id.action_InventoryFragment_to_ScanFragment);
+            }
+        });
     }
 
     @Override
