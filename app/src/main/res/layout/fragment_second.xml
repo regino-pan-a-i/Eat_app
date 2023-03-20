@@ -16,6 +16,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Type new element here"
+            android:layout_centerInParent="true">
+        </EditText>
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:id="@+id/add_button"
+            android:layout_toRightOf="@+id/input"
+            android:layout_marginLeft="7sp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/add_icon"
+            >
+
+        </ImageView>
+
+    </RelativeLayout>
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
@@ -24,7 +53,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button_second"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_second"
+        app:layout_constraintTop_toBottomOf="@+id/header"
         >
 
     </ListView>
