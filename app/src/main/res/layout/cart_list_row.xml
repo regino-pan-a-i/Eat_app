@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
-    android:background="@drawable/cart_rounded_element">
+    android:background="@drawable/rounded_element_teal">
 
     <TextView
         android:id="@+id/number"

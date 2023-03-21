@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/main_background"
     tools:context=".InventoryFragment">
+
     <!--15 Mobile bottom nav aka Footer, Menu, Tabs, Navigation-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mobile_bott"
@@ -78,17 +79,47 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/textView"
+    <RelativeLayout
+        android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="THIS IS THE PANTRY FRAGMENT"
-        android:textColor="#FFFFFF"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/navigation_bar"
+        android:padding="8sp">
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Type new element here"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true">
+        </EditText>
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:id="@+id/add_button"
+            android:layout_toRightOf="@+id/input"
+            android:layout_marginLeft="20sp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/add_icon" >
+        </ImageView>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/mobile_bott"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        >
+    </ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
