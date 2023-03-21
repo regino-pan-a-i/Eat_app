@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="35sp"
-    android:background="@color/red">
+    android:padding="15dp"
+    android:background="@drawable/cart_rounded_element">
 
     <TextView
         android:id="@+id/number"
@@ -28,13 +28,14 @@
 
     <ImageView
         android:id="@+id/remove"
-        android:layout_width="22sp"
-        android:layout_height="22sp"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/name"
         android:layout_marginLeft="18sp"
         android:src="@drawable/cart_small"
-        android:layout_alignParentRight="true">
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15sp">
 
     </ImageView>
 

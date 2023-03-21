@@ -44,7 +44,7 @@ public class ListViewAdapter extends ArrayAdapter<String> {
             remove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    SecondFragment.removeItem(position);
+                    GroceryListFragment.removeItem(position);
 //                    SecondFragment.makeToast("Removed" + position);
                 }
             });
