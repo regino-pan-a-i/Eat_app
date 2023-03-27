@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -12,8 +15,15 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.example.eatdraft.databinding.MealPlanningBinding;
 import com.example.eatdraft.databinding.RecipesFragmentBinding;
 
+import java.util.ArrayList;
+
 public class RecipesFragment extends Fragment {
     private RecipesFragmentBinding binding;
+    private static ListView listView;
+    private static ArrayList<String> items;
+    private static ListViewAdapter adapter;
+    EditText input;
+    ImageView enter;
 
     @Override
     public View onCreateView(
