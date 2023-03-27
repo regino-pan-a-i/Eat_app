@@ -16,7 +16,13 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.eatdraft.databinding.GroceryListFragmentBinding;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class GroceryListFragment extends Fragment{
     private GroceryListFragmentBinding binding;
@@ -24,6 +30,7 @@ public class GroceryListFragment extends Fragment{
     private static ListView listView;
     private static ArrayList<String> items;
     private static ListViewAdapter adapter;
+
     EditText input;
     ImageView enter;
 
@@ -36,8 +43,14 @@ public class GroceryListFragment extends Fragment{
     ) {
 
         binding = GroceryListFragmentBinding.inflate(inflater, container, false);
+        loadContent();
         return binding.getRoot();
 
+    }
+
+    public void onResume(){
+        super.onResume();
+        loadContent();
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -60,11 +73,11 @@ public class GroceryListFragment extends Fragment{
         enter = view.findViewById(R.id.add_button);
 
 
-        items.add("apple");
-        items.add("manzana");
-        items.add("estoy cansado");
-        items.add("tengo hambre");
-        items.add("aiuuuuraaaa");
+//        items.add("apple");
+//        items.add("manzana");
+//        items.add("estoy cansado");
+//        items.add("tengo hambre");
+//        items.add("aiuuuuraaaa");
 
         adapter = new ListViewAdapter(getActivity().getApplicationContext(), items);
         listView.setAdapter(adapter);
@@ -87,6 +100,7 @@ public class GroceryListFragment extends Fragment{
                 }else{
                     addItem(text);
                     input.setText("");
+
                     makeToast("Added: " + text);
 
                 }
@@ -144,8 +158,57 @@ public class GroceryListFragment extends Fragment{
 
     }
 
+    public void loadContent(){
+        File path = getActivity().getApplicationContext().getFilesDir();
+        File readFrom = new File(path, "grocery_list.txt");
+        try {
+            FileInputStream stream = new FileInputStream(readFrom);
+            StringBuilder sb = new StringBuilder();
+            int ch;
+            while ((ch = stream.read()) != -1){
+                if(ch == '\n'){
+                    String item = sb.toString();
+                    items.add(item);
+                    sb.setLength(0);
+                }else{
+                    sb.append((char) ch);
+                }
+            }
+
+        }  catch (FileNotFoundException e) {
+            // File doesn't exist yet, so ignore
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        saveList();
+    }
+
+
+
+    public void saveList(){
+        File path = getActivity().getFilesDir();
+        try {
+            FileOutputStream writer = new FileOutputStream(new File(path, "grocery_list.txt"));
+            StringBuilder sb = new StringBuilder();
+            for (String item : items){
+                writer.write(item.getBytes());
+                writer.write(System.lineSeparator().getBytes());
+            }
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void onDestroyView() {
+
         super.onDestroyView();
         binding = null;
     }
