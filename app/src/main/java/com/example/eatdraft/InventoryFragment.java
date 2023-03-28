@@ -17,6 +17,10 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.eatdraft.databinding.InventoryFragmentBinding;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 public class InventoryFragment extends Fragment {
@@ -24,7 +28,7 @@ public class InventoryFragment extends Fragment {
 
     private static ListView listView;
     private static ArrayList<String> items;
-    private static ListViewAdapter adapter;
+    private static PantryListViewAdapter adapter;
 
     EditText input;
     ImageView enter;
@@ -37,27 +41,33 @@ public class InventoryFragment extends Fragment {
     ) {
 
         binding = InventoryFragmentBinding.inflate(inflater, container, false);
+        loadContent();
         return binding.getRoot();
 
+    }
+
+    public void onResume(){
+        super.onResume();
+        loadContent();
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         // Initialize listView here after view has been created
-        ListView listView = view.findViewById(R.id.listView);
+        listView = view.findViewById(R.id.listView);
         // Use listView here if needed
-        ArrayList<String> items = new ArrayList<>();
-        ArrayAdapter<String> adapter;
+        items = new ArrayList<>();
+        input = view.findViewById(R.id.input);
+        enter = view.findViewById(R.id.add_button);
 
-        items.add("apple");
-        items.add("manzana");
-        items.add("estoy cansado");
-        items.add("tengo hambre");
-        items.add("aiuuuuraaaa");
+//        items.add("apple");
+//        items.add("manzana");
+//        items.add("estoy cansado");
+//        items.add("tengo hambre");
+//        items.add("aiuuuuraaaa");
 
-        adapter = new ListViewAdapter(getActivity().getApplicationContext(), items);
-
+        adapter = new PantryListViewAdapter(getActivity().getApplicationContext(), items);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -69,19 +79,19 @@ public class InventoryFragment extends Fragment {
             }
         });
 
-//        enter.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String text = input.getText().toString();
-//                if (text == null || text.length() == 0){
-//                    makeToast("Enter new item");
-//                } else{
-//                    addItem(text);
-//                    input.setText("");
-//                    makeToast("Added: " + text);
-//                }
-//            }
-//        });
+        enter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String text = input.getText().toString();
+                if (text == null || text.length() == 0){
+                    makeToast("Enter new item");
+                } else{
+                    addItem(text);
+                    input.setText("");
+                    makeToast("Added: " + text);
+                }
+            }
+        });
 
         binding.navPlanningButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,6 +144,55 @@ public class InventoryFragment extends Fragment {
         toast.show();
 
     }
+
+    public void loadContent(){
+        File path = getActivity().getApplicationContext().getFilesDir();
+        File readFrom = new File(path, "pantry_list.txt");
+        try {
+            FileInputStream stream = new FileInputStream(readFrom);
+            StringBuilder sb = new StringBuilder();
+            int ch;
+            while ((ch = stream.read()) != -1){
+                if(ch == '\n'){
+                    String item = sb.toString();
+                    items.add(item);
+                    sb.setLength(0);
+                }else{
+                    sb.append((char) ch);
+                }
+            }
+
+        }  catch (FileNotFoundException e) {
+            // File doesn't exist yet, so ignore
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        saveList();
+    }
+
+
+
+    public void saveList(){
+        File path = getActivity().getFilesDir();
+        try {
+            FileOutputStream writer = new FileOutputStream(new File(path, "pantry_list.txt"));
+            StringBuilder sb = new StringBuilder();
+            for (String item : items){
+                writer.write(item.getBytes());
+                writer.write(System.lineSeparator().getBytes());
+            }
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @Override
     public void onDestroyView() {

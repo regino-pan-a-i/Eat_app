@@ -34,8 +34,6 @@ public class GroceryListFragment extends Fragment{
     EditText input;
     ImageView enter;
 
-
-
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,

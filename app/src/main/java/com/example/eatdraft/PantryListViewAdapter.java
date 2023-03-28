@@ -14,13 +14,13 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class ListViewAdapter extends ArrayAdapter<String> {
+public class PantryListViewAdapter extends ArrayAdapter<String> {
 
     ArrayList<String> list;
     Context context;
 
-    public ListViewAdapter(Context context, ArrayList<String> items){
-        super(context, R.layout.cart_list_row, items);
+    public PantryListViewAdapter(Context context, ArrayList<String> items){
+        super(context, R.layout.pantry_list_row, items);
 
         this.context = context;
 
@@ -33,7 +33,7 @@ public class ListViewAdapter extends ArrayAdapter<String> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent){
         if( convertView == null){
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-            convertView = layoutInflater.inflate(R.layout.cart_list_row, null);
+            convertView = layoutInflater.inflate(R.layout.pantry_list_row, null);
             TextView number = convertView.findViewById(R.id.number);
             number.setText(position + 1 + ".");
             TextView name = convertView.findViewById(R.id.name);
@@ -44,8 +44,7 @@ public class ListViewAdapter extends ArrayAdapter<String> {
             remove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    GroceryListFragment.removeItem(position);
-
+                    InventoryFragment.removeItem(position);
                 }
             });
         }
