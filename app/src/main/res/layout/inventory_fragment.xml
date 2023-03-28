@@ -88,16 +88,16 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/navigation_bar"
         android:padding="8sp">
+
         <EditText
             android:id="@+id/input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:ems="10"
             android:hint="Type new element here"
-            android:textColorHint="@color/white"
             android:textColor="@color/white"
-            android:layout_centerInParent="true">
-        </EditText>
+            android:textColorHint="@color/white"></EditText>
         <ImageView
             android:layout_width="40sp"
             android:layout_height="40sp"
