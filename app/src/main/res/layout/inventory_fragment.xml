@@ -115,15 +115,15 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="586dp"
         android:layout_marginLeft="20sp"
         android:layout_marginRight="20sp"
-        android:layout_below="@id/header"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/mobile_bott"
+        android:layout_marginTop="10sp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="75dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintTop_toBottomOf="@id/header"
         >
     </ListView>
 
