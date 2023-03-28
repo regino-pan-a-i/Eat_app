@@ -75,20 +75,50 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/textView3"
+    <RelativeLayout
+        android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is the recipes fragment"
-        android:textColor="#FFFFFF"
-        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/navigation_bar"
+        android:padding="8sp">
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ems="10"
+            android:hint="Search"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white">
+        </EditText>
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:id="@+id/add_button"
+            android:layout_toEndOf="@+id/input"
+            android:layout_marginStart="20sp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search_button" >
+        </ImageView>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/mobile_bott"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/header" >
+    </ListView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
