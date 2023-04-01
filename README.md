@@ -7,9 +7,7 @@ This app to keep track of all your grocery list and inventory. You can add items
 pantry's inventory. We wanted to make it easier for people who forget what they need when they arrive at the grocery store and help them eat well with ingredients they 
 have. Food is not only good for the body but also the mind. :)
 
-{Link to YouTube demonstration. 4-5 minute demo of the app running and a walkthrough of the code.}
-
-[Eat! App Demo Video](http://youtube.link.goes.here)
+[Eat! App Demo Video](https://youtu.be/MzZi9DXv2GM)
 
 # Development Environment
 
